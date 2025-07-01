@@ -4,15 +4,15 @@ import cors from 'cors';
 import generateSocialPost, { generateBookSuggestions } from './generateContent.js';
 
 dotenv.config();
-cors({
-  origin: '*',
-});
 
 const app = express();
 const port =process.env.PORT || 8080
 
 // Middleware to parse JSON body
 app.use(express.json());
+app.use(cors({
+  origin: '*',
+}));
 
 app.get('/', (req, res) => {
   res.send('Hello World');
