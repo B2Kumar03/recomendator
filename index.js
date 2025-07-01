@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
   res.send('Hello World');
 });
 
-app.post('/generate-post', async (req, res) => {
+app.post('/generate-recomendations', async (req, res) => {
   const { title, author } = req.body;
 
 
