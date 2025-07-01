@@ -1,8 +1,12 @@
 import express from 'express';
 import dotenv from 'dotenv';
+import cors from 'cors';
 import generateSocialPost, { generateBookSuggestions } from './generateContent.js';
 
 dotenv.config();
+cors({
+  origin: '*',
+});
 
 const app = express();
 const port =process.env.PORT || 8080
