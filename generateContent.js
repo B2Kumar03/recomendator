@@ -1,4 +1,4 @@
-// services/bookSuggestionService.js
+
 import { genAI } from "./constant.js";
 
 export const generateBookSuggestions = async (title, author) => {
