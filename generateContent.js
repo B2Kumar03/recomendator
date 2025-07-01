@@ -1,5 +1,5 @@
 // services/bookSuggestionService.js
-import { genAI } from "./constant.js"; // ✅ Make sure genAI is configured correctly
+import { genAI } from "./constant.js";
 
 export const generateBookSuggestions = async (title, author) => {
   try {
@@ -22,7 +22,6 @@ Example:
 
     const raw = await result.response.text();
 
-    // 🧼 Extract JSON (in case Gemini wraps it in markdown)
     const jsonMatch = raw.match(/```json\s*([\s\S]*?)\s*```/) || raw.match(/```([\s\S]*?)```/);
     const rawJson = jsonMatch ? jsonMatch[1].trim() : raw;
 
